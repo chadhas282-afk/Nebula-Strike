@@ -5,3 +5,4 @@ const PLAYER_SPD = 5.2;
 const BULLET_SPD = 9;
 const ENEMY_BULLET_SPD = 3.4;
 const ROWS = 4, COLS = 10;
+const EW = 38, EH = 26;
