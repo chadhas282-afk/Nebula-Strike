@@ -23,3 +23,5 @@ function mkStars(n) {
         hue: rndInt(180, 290), alpha: rnd(0.018, 0.055),
   }));
 }
+
+function mkEnemies(level) {
