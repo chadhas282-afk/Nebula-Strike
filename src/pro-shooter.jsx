@@ -25,3 +25,4 @@ function mkStars(n) {
 }
 
 function mkEnemies(level) {
+     const out = [];
