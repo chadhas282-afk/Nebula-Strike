@@ -10,3 +10,4 @@ const PW = 52, PH = 36;
 const BW = 4, BH = 16;
 
 const lerp = (a, b, t) => a + (b - a) * t;
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
