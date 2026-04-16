@@ -14,3 +14,4 @@ const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const rnd = (lo, hi) => Math.random() * (hi - lo) + lo;
 const rndInt = (lo, hi) => Math.floor(rnd(lo, hi + 1));
 const rect = (ax, ay, aw, ah, bx, by, bw, bh) =>
+      ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by;
