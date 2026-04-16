@@ -19,3 +19,4 @@ const rect = (ax, ay, aw, ah, bx, by, bw, bh) =>
 function mkStars(n) {
     return Array.from({ length: n }, () => ({
         x: rnd(0, W), y: rnd(0, H),
+        rx: rnd(60, 180), ry: rnd(40, 120),
