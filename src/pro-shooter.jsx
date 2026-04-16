@@ -20,3 +20,6 @@ function mkStars(n) {
     return Array.from({ length: n }, () => ({
         x: rnd(0, W), y: rnd(0, H),
         rx: rnd(60, 180), ry: rnd(40, 120),
+        hue: rndInt(180, 290), alpha: rnd(0.018, 0.055),
+  }));
+}
