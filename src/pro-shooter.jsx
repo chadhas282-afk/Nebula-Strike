@@ -11,3 +11,4 @@ const BW = 4, BH = 16;
 
 const lerp = (a, b, t) => a + (b - a) * t;
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+const rnd = (lo, hi) => Math.random() * (hi - lo) + lo;
