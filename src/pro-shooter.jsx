@@ -7,3 +7,4 @@ const ENEMY_BULLET_SPD = 3.4;
 const ROWS = 4, COLS = 10;
 const EW = 38, EH = 26;
 const PW = 52, PH = 36;
+const BW = 4, BH = 16;
