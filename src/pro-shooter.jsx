@@ -26,3 +26,4 @@ function mkStars(n) {
 
 function mkEnemies(level) {
      const out = [];
+     for (let r = 0; r < ROWS; r++)
