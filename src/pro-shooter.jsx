@@ -48,3 +48,5 @@ function mkExplosion(x, y, color, count = 16) {
 }
 function mkPowerup(x, y) {
       const types = ["shield", "rapid", "bomb"];
+      return { x, y, type: types[rndInt(0, 2)], vy: 1.2, age: 0, alive: true };
+}
