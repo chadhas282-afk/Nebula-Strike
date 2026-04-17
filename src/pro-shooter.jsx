@@ -31,3 +31,7 @@ function mkEnemies(level) {
       out.push({
             id: r * COLS + c, r, c, alive: true, hp: r === 0 ? 2 : 1,
              x: 55 + c * (EW + 14), y: 52 + r * (EH + 18),
+             flashAge: 0,
+      });
+  return out;
+}
