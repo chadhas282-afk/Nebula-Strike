@@ -29,3 +29,5 @@ function mkEnemies(level) {
      for (let r = 0; r < ROWS; r++)
        for (let c = 0; c < COLS; c++)
       out.push({
+            id: r * COLS + c, r, c, alive: true, hp: r === 0 ? 2 : 1,
+            
