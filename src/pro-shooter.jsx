@@ -41,3 +41,4 @@ function mkExplosion(x, y, color, count = 16) {
             x, y, age: 0, maxAge: 38,
             particles: Array.from({ length: count }, () => ({
                   vx: rnd(-5, 5), vy: rnd(-5, 5),
+                  r: rnd(1.5, 4.5), color,
