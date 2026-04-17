@@ -47,3 +47,4 @@ function mkExplosion(x, y, color, count = 16) {
       };
 }
 function mkPowerup(x, y) {
+      const types = ["shield", "rapid", "bomb"];
