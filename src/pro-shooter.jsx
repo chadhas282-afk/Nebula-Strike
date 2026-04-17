@@ -37,3 +37,5 @@ function mkEnemies(level) {
 }
 
 function mkExplosion(x, y, color, count = 16) {
+      return {
+            x, y, age: 0, maxAge: 38,
