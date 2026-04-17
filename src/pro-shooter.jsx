@@ -35,3 +35,5 @@ function mkEnemies(level) {
       });
   return out;
 }
+
+function mkExplosion(x, y, color, count = 16) {
