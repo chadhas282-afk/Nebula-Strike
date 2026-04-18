@@ -61,3 +61,4 @@ const PALETTE = {
       enemyGlow: ["#ff0033", "#e05010", "#c8a000", "#7000ff"],
       hud: "#00d4ff",
       hudDim: "#0a3a50",
+      accent: "#ff4d6d",
