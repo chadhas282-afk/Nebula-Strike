@@ -52,3 +52,4 @@ function mkPowerup(x, y) {
 }
 
 const PALETTE = {
+      bg: "#03060f",
