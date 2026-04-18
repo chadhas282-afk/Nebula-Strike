@@ -56,3 +56,4 @@ const PALETTE = {
       player: "#d0f0ff",
       playerGlow: "#00d4ff",
       bullet: "#80ffee",
+      bulletGlow: "#00ffcc",
