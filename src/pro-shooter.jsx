@@ -58,3 +58,4 @@ const PALETTE = {
       bullet: "#80ffee",
       bulletGlow: "#00ffcc",
       enemyColors: ["#ff4d6d", "#ff8c42", "#ffd700", "#b07cff"],
+      enemyGlow: ["#ff0033", "#e05010", "#c8a000", "#7000ff"],
