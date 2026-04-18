@@ -64,3 +64,4 @@ const PALETTE = {
       accent: "#ff4d6d",
       green: "#39ff88",
       amber: "#ffa030",
+      shield: "#40c8ff",
