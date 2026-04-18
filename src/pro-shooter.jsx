@@ -63,3 +63,4 @@ const PALETTE = {
       hudDim: "#0a3a50",
       accent: "#ff4d6d",
       green: "#39ff88",
+      amber: "#ffa030",
