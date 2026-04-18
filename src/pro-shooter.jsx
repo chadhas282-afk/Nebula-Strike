@@ -66,3 +66,6 @@ const PALETTE = {
       amber: "#ffa030",
       shield: "#40c8ff",
       rapid: "#ff6bff",
+      bomb: "#ff4d6d",
+      scanline: "rgba(0,0,0,0.18)",
+};
