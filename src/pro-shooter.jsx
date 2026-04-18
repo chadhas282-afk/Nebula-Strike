@@ -60,3 +60,4 @@ const PALETTE = {
       enemyColors: ["#ff4d6d", "#ff8c42", "#ffd700", "#b07cff"],
       enemyGlow: ["#ff0033", "#e05010", "#c8a000", "#7000ff"],
       hud: "#00d4ff",
+      hudDim: "#0a3a50",
