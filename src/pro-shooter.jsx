@@ -65,3 +65,4 @@ const PALETTE = {
       green: "#39ff88",
       amber: "#ffa030",
       shield: "#40c8ff",
+      rapid: "#ff6bff",
