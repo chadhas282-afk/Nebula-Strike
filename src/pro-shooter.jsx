@@ -57,3 +57,4 @@ const PALETTE = {
       playerGlow: "#00d4ff",
       bullet: "#80ffee",
       bulletGlow: "#00ffcc",
+      enemyColors: ["#ff4d6d", "#ff8c42", "#ffd700", "#b07cff"],
