@@ -53,3 +53,4 @@ function mkPowerup(x, y) {
 
 const PALETTE = {
       bg: "#03060f",
+      player: "#d0f0ff",
