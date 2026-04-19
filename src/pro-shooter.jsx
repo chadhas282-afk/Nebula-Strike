@@ -77,3 +77,4 @@ function glow(ctx, color, blur, fn) {
 function roundRect(ctx, x, y, w, h, r) {
       ctx.beginPath();
       ctx.moveTo(x + r, y);
+      ctx.lineTo(x + w - r, y);
