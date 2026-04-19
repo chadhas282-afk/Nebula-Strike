@@ -83,3 +83,4 @@ function roundRect(ctx, x, y, w, h, r) {
       ctx.arcTo(x + w, y + h, x + w - r, y + h, r);
       ctx.lineTo(x + r, y + h);
       ctx.arcTo(x, y + h, x, y + h - r, r);
+      ctx.lineTo(x, y + r);
