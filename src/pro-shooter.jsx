@@ -69,3 +69,5 @@ const PALETTE = {
       bomb: "#ff4d6d",
       scanline: "rgba(0,0,0,0.18)",
 };
+
+function glow(ctx, color, blur, fn) {
