@@ -75,3 +75,4 @@ function glow(ctx, color, blur, fn) {
 }
 
 function roundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
