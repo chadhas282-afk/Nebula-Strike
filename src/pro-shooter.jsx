@@ -87,3 +87,5 @@ function roundRect(ctx, x, y, w, h, r) {
       ctx.arcTo(x, y, x + r, y, r);
       ctx.closePath();
 }
+
+function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
