@@ -71,3 +71,5 @@ const PALETTE = {
 };
 
 function glow(ctx, color, blur, fn) {
+      ctx.save(); ctx.shadowColor = color; ctx.shadowBlur = blur; fn(); ctx.restore();
+}
