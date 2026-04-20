@@ -102,3 +102,6 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   ctx.fillStyle = `rgba(255,220,100,${0.4 * flicker})`;
   ctx.beginPath();
   ctx.ellipse(0, PH / 2 - 2, 4, 6 * flicker, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  const flashAlpha = hitFlash > 0 ? hitFlash / 8 : 0;
