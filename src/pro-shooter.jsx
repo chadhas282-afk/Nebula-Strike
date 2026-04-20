@@ -95,3 +95,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       const flicker = Math.sin(frame * 0.35) * 0.3 + 0.7;
       glow(ctx, "#ff8020", 18, () => {
             ctx.fillStyle = `rgba(255,140,40,${0.6 * flicker})`;
+            ctx.beginPath();
