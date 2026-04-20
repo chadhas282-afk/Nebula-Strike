@@ -93,3 +93,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       ctx.save(); ctx.translate(cx, cy);
 
       const flicker = Math.sin(frame * 0.35) * 0.3 + 0.7;
+      glow(ctx, "#ff8020", 18, () => {
