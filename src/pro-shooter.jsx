@@ -91,3 +91,5 @@ function roundRect(ctx, x, y, w, h, r) {
 function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       const cx = x + PW / 2, cy = y + PH / 2;
       ctx.save(); ctx.translate(cx, cy);
+
+      const flicker = Math.sin(frame * 0.35) * 0.3 + 0.7;
