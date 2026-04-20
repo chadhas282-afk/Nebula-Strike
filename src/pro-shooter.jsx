@@ -96,3 +96,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       glow(ctx, "#ff8020", 18, () => {
             ctx.fillStyle = `rgba(255,140,40,${0.6 * flicker})`;
             ctx.beginPath();
+            ctx.ellipse(0, PH / 2 + 2, 8, 14 * flicker, 0, 0, Math.PI * 2);
