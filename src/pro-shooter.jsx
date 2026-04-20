@@ -105,3 +105,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   ctx.fill();
 
   const flashAlpha = hitFlash > 0 ? hitFlash / 8 : 0;
+  const bodyColor = flashAlpha > 0 ? `rgba(255,80,80,${flashAlpha + 0.6})` : PALETTE.player;
