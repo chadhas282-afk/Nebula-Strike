@@ -108,3 +108,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   const bodyColor = flashAlpha > 0 ? `rgba(255,80,80,${flashAlpha + 0.6})` : PALETTE.player;
   glow(ctx, PALETTE.playerGlow, rapidTimer > 0 ? 22 : 12, () => {
       ctx.fillStyle = bodyColor;
+      ctx.beginPath();
