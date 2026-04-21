@@ -114,3 +114,6 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       ctx.lineTo(PW * 0.28, PH / 2 - 10);
       ctx.lineTo(-PW * 0.28, PH / 2 - 10);
       ctx.lineTo(-PW / 2, PH / 2 - 4);
+      ctx.closePath();
+      ctx.fill();
+  });
