@@ -125,3 +125,5 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       ctx.fill();
   });
   ctx.strokeStyle = PALETTE.playerGlow;
+  ctx.lineWidth = 1.2;
+  ctx.globalAlpha = 0.5;
