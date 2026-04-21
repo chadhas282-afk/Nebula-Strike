@@ -117,3 +117,5 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       ctx.closePath();
       ctx.fill();
   });
+
+  glow(ctx, "#80ffee", 8, () => {
