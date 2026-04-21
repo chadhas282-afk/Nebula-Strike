@@ -109,3 +109,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   glow(ctx, PALETTE.playerGlow, rapidTimer > 0 ? 22 : 12, () => {
       ctx.fillStyle = bodyColor;
       ctx.beginPath();
+      ctx.moveTo(0, -PH / 2);
