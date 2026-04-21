@@ -124,3 +124,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       ctx.ellipse(0, -4, 8, 10, 0, 0, Math.PI * 2);
       ctx.fill();
   });
+  ctx.strokeStyle = PALETTE.playerGlow;
