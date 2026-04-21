@@ -132,3 +132,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   ctx.globalAlpha = 1;
 
   if (shieldHp > 0) {
+      const age = (frame * 0.04);
