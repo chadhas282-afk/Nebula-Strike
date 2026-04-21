@@ -120,3 +120,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
 
   glow(ctx, "#80ffee", 8, () => {
       ctx.fillStyle = rapidTimer > 0 ? "#ff80ff" : "#80ffee";
+      ctx.beginPath();
