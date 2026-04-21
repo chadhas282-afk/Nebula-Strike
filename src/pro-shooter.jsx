@@ -110,3 +110,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       ctx.fillStyle = bodyColor;
       ctx.beginPath();
       ctx.moveTo(0, -PH / 2);
+      ctx.lineTo(PW / 2, PH / 2 - 4);
