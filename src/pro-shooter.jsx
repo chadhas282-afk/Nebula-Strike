@@ -129,3 +129,6 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   ctx.globalAlpha = 0.5;
   ctx.beginPath(); ctx.moveTo(-PW * 0.35, PH * 0.1); ctx.lineTo(-PW * 0.12, -PH * 0.18); ctx.stroke();
   ctx.beginPath(); ctx.moveTo(PW * 0.35, PH * 0.1); ctx.lineTo(PW * 0.12, -PH * 0.18); ctx.stroke();
+  ctx.globalAlpha = 1;
+
+  if (shieldHp > 0) {
