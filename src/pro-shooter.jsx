@@ -142,3 +142,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
     });
     ctx.strokeStyle = `rgba(64,200,255,0.18)`;
     ctx.lineWidth = 8;
+    ctx.beginPath();
