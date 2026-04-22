@@ -150,3 +150,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
   ctx.restore();
 }
 function drawEnemy(ctx, e, frame) {
+      if (!e.alive) return;
