@@ -143,3 +143,6 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
     ctx.strokeStyle = `rgba(64,200,255,0.18)`;
     ctx.lineWidth = 8;
     ctx.beginPath();
+    ctx.ellipse(0, 0, PW * 0.72, PH * 0.82, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  }
