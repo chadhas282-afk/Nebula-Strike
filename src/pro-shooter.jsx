@@ -133,3 +133,4 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
 
   if (shieldHp > 0) {
       const age = (frame * 0.04);
+      glow(ctx, PALETTE.shield, 18, () => {
