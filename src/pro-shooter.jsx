@@ -135,3 +135,5 @@ function drawPlayer(ctx, x, y, frame, shieldHp, rapidTimer, hitFlash) {
       const age = (frame * 0.04);
       glow(ctx, PALETTE.shield, 18, () => {
             ctx.strokeStyle = `rgba(64,200,255,${0.55 + Math.sin(age * 3) * 0.2})`;
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
