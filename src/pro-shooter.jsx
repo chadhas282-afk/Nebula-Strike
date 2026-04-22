@@ -153,3 +153,4 @@ function drawEnemy(ctx, e, frame) {
       if (!e.alive) return;
       const cx = e.x + EW / 2, cy = e.y + EH / 2;
       const bob = Math.sin(frame * 0.07 + e.c * 0.4 + e.r) * 1.8;
+      const flash = e.flashAge > 0;
