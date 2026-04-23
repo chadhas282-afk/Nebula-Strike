@@ -172,3 +172,5 @@ function drawEnemy(ctx, e, frame) {
             ctx.beginPath();
             ctx.moveTo(0, -EH / 2);
             ctx.bezierCurveTo(EW / 2, -EH / 2, EW / 2, EH * 0.2, 0, EH * 0.3);
+            ctx.bezierCurveTo(-EW / 2, EH * 0.2, -EW / 2, -EH / 2, 0, -EH / 2);
+            ctx.fill();
