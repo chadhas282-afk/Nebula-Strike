@@ -180,3 +180,4 @@ function drawEnemy(ctx, e, frame) {
                   ctx.quadraticCurveTo(i * 7 + Math.sin(frame * 0.12 + i) * 4, EH * 0.28 + 8, i * 7, EH * 0.28 + 13);
                   ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.stroke();
       }
+      } else if (e.r === 2) {
