@@ -155,3 +155,4 @@ function drawEnemy(ctx, e, frame) {
       const bob = Math.sin(frame * 0.07 + e.c * 0.4 + e.r) * 1.8;
       const flash = e.flashAge > 0;
       const col = flash ? "#ffffff" : PALETTE.enemyColors[e.r % 4];
+      const gcol = flash ? "#ffffff" : PALETTE.enemyGlow[e.r % 4];
