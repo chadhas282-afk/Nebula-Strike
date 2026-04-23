@@ -156,3 +156,4 @@ function drawEnemy(ctx, e, frame) {
       const flash = e.flashAge > 0;
       const col = flash ? "#ffffff" : PALETTE.enemyColors[e.r % 4];
       const gcol = flash ? "#ffffff" : PALETTE.enemyGlow[e.r % 4];
+      ctx.save(); ctx.translate(cx, cy + bob);
