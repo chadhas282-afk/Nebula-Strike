@@ -184,3 +184,5 @@ function drawEnemy(ctx, e, frame) {
             ctx.beginPath();
             ctx.moveTo(0, -EH / 2); ctx.lineTo(EW / 2, 0);
             ctx.lineTo(0, EH / 2); ctx.lineTo(-EW / 2, 0);
+            ctx.closePath(); ctx.fill();
+    }
