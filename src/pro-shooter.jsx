@@ -174,3 +174,4 @@ function drawEnemy(ctx, e, frame) {
             ctx.bezierCurveTo(EW / 2, -EH / 2, EW / 2, EH * 0.2, 0, EH * 0.3);
             ctx.bezierCurveTo(-EW / 2, EH * 0.2, -EW / 2, -EH / 2, 0, -EH / 2);
             ctx.fill();
+            for (let i = -2; i <= 2; i++) {
