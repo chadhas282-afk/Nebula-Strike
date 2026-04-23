@@ -159,3 +159,4 @@ function drawEnemy(ctx, e, frame) {
       ctx.save(); ctx.translate(cx, cy + bob);
 
       glow(ctx, gcol, 14, () => {
+            ctx.fillStyle = col;
