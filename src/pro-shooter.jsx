@@ -177,3 +177,4 @@ function drawEnemy(ctx, e, frame) {
             for (let i = -2; i <= 2; i++) {
                   ctx.beginPath();
                   ctx.moveTo(i * 7, EH * 0.28);
+                  ctx.quadraticCurveTo(i * 7 + Math.sin(frame * 0.12 + i) * 4, EH * 0.28 + 8, i * 7, EH * 0.28 + 13);
