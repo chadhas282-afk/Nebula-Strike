@@ -171,3 +171,4 @@ function drawEnemy(ctx, e, frame) {
       } else if (e.r === 1) {
             ctx.beginPath();
             ctx.moveTo(0, -EH / 2);
+            ctx.bezierCurveTo(EW / 2, -EH / 2, EW / 2, EH * 0.2, 0, EH * 0.3);
