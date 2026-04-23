@@ -160,3 +160,5 @@ function drawEnemy(ctx, e, frame) {
 
       glow(ctx, gcol, 14, () => {
             ctx.fillStyle = col;
+            if (e.r === 0) {
+                  ctx.beginPath();
