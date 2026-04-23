@@ -164,3 +164,5 @@ function drawEnemy(ctx, e, frame) {
                   ctx.beginPath();
                   ctx.ellipse(0, 0, EW / 2, EH / 2, 0, 0, Math.PI * 2);
                   ctx.fill();
+                  ctx.beginPath();
+                  ctx.ellipse(-EW * 0.52, 2, 5, 4, -0.4, 0, Math.PI * 2);
