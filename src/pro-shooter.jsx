@@ -181,3 +181,4 @@ function drawEnemy(ctx, e, frame) {
                   ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.stroke();
       }
       } else if (e.r === 2) {
+            ctx.beginPath();
