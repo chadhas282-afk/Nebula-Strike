@@ -213,3 +213,5 @@ function drawEnemy(ctx, e, frame) {
 function drawBullet(ctx, b) {
       ctx.save();
   glow(ctx, PALETTE.bulletGlow, 14, () => {
+      const grad = ctx.createLinearGradient(b.x + BW / 2, b.y, b.x + BW / 2, b.y + BH);
+    grad.addColorStop(0, "#ffffff");
