@@ -217,3 +217,7 @@ function drawBullet(ctx, b) {
     grad.addColorStop(0, "#ffffff");
     grad.addColorStop(1, PALETTE.bullet);
     ctx.fillStyle = grad;
+    roundRect(ctx, b.x, b.y, BW, BH, 2); ctx.fill();
+  });
+  ctx.restore();
+}
