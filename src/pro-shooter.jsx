@@ -228,3 +228,7 @@ function drawEnemyBullet(ctx, b, frame) {
       ctx.fillStyle = `rgba(255,60,80,${flicker})`;
     ctx.beginPath(); ctx.ellipse(b.x + 3, b.y + 6, 3.5, 8, 0, 0, Math.PI * 2); ctx.fill();
   });
+  ctx.fillStyle = "#fff";
+  ctx.beginPath(); ctx.ellipse(b.x + 3, b.y + 5, 1.5, 3, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.restore();
+}
