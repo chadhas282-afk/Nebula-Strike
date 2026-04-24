@@ -241,3 +241,5 @@ function drawEnemyBullet(ctx, b, frame) {
 }
 
 function drawExplosion(ctx, ex) {
+      const t = ex.age / ex.maxAge;
+  ctx.save(); ctx.globalAlpha = 1 - t;
