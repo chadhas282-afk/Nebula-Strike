@@ -232,3 +232,5 @@ function drawEnemyBullet(ctx, b, frame) {
   ctx.beginPath(); ctx.ellipse(b.x + 3, b.y + 5, 1.5, 3, 0, 0, Math.PI * 2); ctx.fill();
   ctx.restore();
 }
+
+function drawExplosion(ctx, ex) {
