@@ -196,3 +196,5 @@ function drawEnemy(ctx, e, frame) {
   });
 
   ctx.fillStyle = "#fff";
+  ctx.beginPath(); ctx.ellipse(-6, -3, 4, 4, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(6, -3, 4, 4, 0, 0, Math.PI * 2); ctx.fill();
