@@ -221,3 +221,5 @@ function drawBullet(ctx, b) {
   });
   ctx.restore();
 }
+function drawEnemyBullet(ctx, b, frame) {
+  ctx.save();
