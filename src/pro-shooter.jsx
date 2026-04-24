@@ -211,3 +211,5 @@ function drawEnemy(ctx, e, frame) {
 }
 
 function drawBullet(ctx, b) {
+      ctx.save();
+  glow(ctx, PALETTE.bulletGlow, 14, () => {
