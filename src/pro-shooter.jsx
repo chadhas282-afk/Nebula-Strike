@@ -223,3 +223,5 @@ function drawBullet(ctx, b) {
 }
 function drawEnemyBullet(ctx, b, frame) {
   ctx.save();
+  const flicker = Math.sin(frame * 0.4 + b.x) * 0.3 + 0.7;
+  glow(ctx, "#ff2050", 12 * flicker, () => {
