@@ -209,3 +209,5 @@ function drawEnemy(ctx, e, frame) {
 
   ctx.restore();
 }
+
+function drawBullet(ctx, b) {
