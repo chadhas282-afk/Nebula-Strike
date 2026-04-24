@@ -204,3 +204,8 @@ function drawEnemy(ctx, e, frame) {
 
    if (e.hp > 1) {
     ctx.fillStyle = "#fff";
+    ctx.beginPath(); ctx.arc(0, EH / 2 + 5, 3, 0, Math.PI * 2); ctx.fill();
+  }
+
+  ctx.restore();
+}
