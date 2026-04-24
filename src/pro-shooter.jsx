@@ -194,3 +194,5 @@ function drawEnemy(ctx, e, frame) {
       ctx.fill();
     }
   });
+
+  ctx.fillStyle = "#fff";
