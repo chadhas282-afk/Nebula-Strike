@@ -225,3 +225,6 @@ function drawEnemyBullet(ctx, b, frame) {
   ctx.save();
   const flicker = Math.sin(frame * 0.4 + b.x) * 0.3 + 0.7;
   glow(ctx, "#ff2050", 12 * flicker, () => {
+      ctx.fillStyle = `rgba(255,60,80,${flicker})`;
+    ctx.beginPath(); ctx.ellipse(b.x + 3, b.y + 6, 3.5, 8, 0, 0, Math.PI * 2); ctx.fill();
+  });
