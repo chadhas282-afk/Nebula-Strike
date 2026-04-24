@@ -201,3 +201,6 @@ function drawEnemy(ctx, e, frame) {
    ctx.fillStyle = gcol;
   ctx.beginPath(); ctx.ellipse(-6, -3, 2, 2, 0, 0, Math.PI * 2); ctx.fill();
   ctx.beginPath(); ctx.ellipse(6, -3, 2, 2, 0, 0, Math.PI * 2); ctx.fill();
+
+   if (e.hp > 1) {
+    ctx.fillStyle = "#fff";
