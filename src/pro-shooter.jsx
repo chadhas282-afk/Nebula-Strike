@@ -215,3 +215,5 @@ function drawBullet(ctx, b) {
   glow(ctx, PALETTE.bulletGlow, 14, () => {
       const grad = ctx.createLinearGradient(b.x + BW / 2, b.y, b.x + BW / 2, b.y + BH);
     grad.addColorStop(0, "#ffffff");
+    grad.addColorStop(1, PALETTE.bullet);
+    ctx.fillStyle = grad;
