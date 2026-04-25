@@ -287,3 +287,7 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
   });
   ctx.fillStyle = PALETTE.hudDim; ctx.font = "10px 'Courier New', monospace";
   ctx.fillText("LEVEL", W / 2 - 20, 16);
+  glow(ctx, PALETTE.amber, 6, () => {
+    ctx.fillStyle = PALETTE.amber; ctx.font = "bold 20px 'Courier New', monospace";
+    ctx.fillText(String(level).padStart(2, "0"), W / 2 - 12, 36);
+  });
