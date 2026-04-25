@@ -262,3 +262,5 @@ function drawPowerup(ctx, p, frame) {
   ctx.rotate(spin);
   glow(ctx, colors[p.type], 16, () => {
     ctx.strokeStyle = colors[p.type]; ctx.lineWidth = 2;
+    roundRect(ctx, -12, -12, 24, 24, 5); ctx.stroke();
+  });
