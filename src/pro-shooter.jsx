@@ -264,3 +264,5 @@ function drawPowerup(ctx, p, frame) {
     ctx.strokeStyle = colors[p.type]; ctx.lineWidth = 2;
     roundRect(ctx, -12, -12, 24, 24, 5); ctx.stroke();
   });
+  ctx.fillStyle = colors[p.type];
+  ctx.font = "bold 13px 'Courier New', monospace";
