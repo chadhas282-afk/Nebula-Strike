@@ -245,3 +245,5 @@ function drawExplosion(ctx, ex) {
   ctx.save(); ctx.globalAlpha = 1 - t;
   ex.particles.forEach((p) => {
     const px = ex.x + p.vx * ex.age * p.drag;
+    const py = ex.y + p.vy * ex.age * p.drag;
+    ctx.fillStyle = p.color;
