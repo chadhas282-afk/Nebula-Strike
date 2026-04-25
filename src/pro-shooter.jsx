@@ -273,3 +273,5 @@ function drawPowerup(ctx, p, frame) {
 
 function drawHUD(ctx, state) {
   const { score, lives, shieldHp, rapidTimer, bombs, combo, comboTimer, level, bossHp, bossMaxHp } = state;
+ctx.fillStyle = "rgba(0,5,18,0.82)";
+  ctx.fillRect(0, 0, W, 44);
