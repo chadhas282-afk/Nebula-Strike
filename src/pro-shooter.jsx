@@ -266,3 +266,7 @@ function drawPowerup(ctx, p, frame) {
   });
   ctx.fillStyle = colors[p.type];
   ctx.font = "bold 13px 'Courier New', monospace";
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText(labels[p.type], 0, 0);
+  ctx.restore();
+}
