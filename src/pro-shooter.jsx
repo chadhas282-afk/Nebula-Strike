@@ -250,3 +250,5 @@ function drawExplosion(ctx, ex) {
     ctx.shadowColor = p.color; ctx.shadowBlur = 8;
     ctx.beginPath(); ctx.arc(px, py, p.r * (1 - t * 0.6), 0, Math.PI * 2); ctx.fill();
   });
+  ctx.restore();
+}
