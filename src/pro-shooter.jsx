@@ -260,3 +260,5 @@ function drawPowerup(ctx, p, frame) {
   const labels = { shield: "S", rapid: "R", bomb: "B" };
   ctx.save(); ctx.translate(p.x + 14, p.y + 14);
   ctx.rotate(spin);
+  glow(ctx, colors[p.type], 16, () => {
+    ctx.strokeStyle = colors[p.type]; ctx.lineWidth = 2;
