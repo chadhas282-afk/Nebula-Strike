@@ -270,3 +270,6 @@ function drawPowerup(ctx, p, frame) {
   ctx.fillText(labels[p.type], 0, 0);
   ctx.restore();
 }
+
+function drawHUD(ctx, state) {
+  const { score, lives, shieldHp, rapidTimer, bombs, combo, comboTimer, level, bossHp, bossMaxHp } = state;
