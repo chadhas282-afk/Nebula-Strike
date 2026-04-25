@@ -293,3 +293,8 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
   });
   ctx.fillStyle = PALETTE.hudDim; ctx.font = "10px 'Courier New', monospace";
   ctx.fillText("FLEET", W - 130, 16);
+  for (let i = 0; i < lives; i++) {
+    const lx = W - 122 + i * 22, ly = 26;
+     glow(ctx, PALETTE.playerGlow, 6, () => {
+      ctx.fillStyle = i < lives ? PALETTE.player : "rgba(0,200,255,0.15)";
+      ctx.beginPath();
