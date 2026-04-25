@@ -252,3 +252,6 @@ function drawExplosion(ctx, ex) {
   });
   ctx.restore();
 }
+
+function drawPowerup(ctx, p, frame) {
+  if (!p.alive) return;
