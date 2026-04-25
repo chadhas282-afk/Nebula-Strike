@@ -243,3 +243,5 @@ function drawEnemyBullet(ctx, b, frame) {
 function drawExplosion(ctx, ex) {
       const t = ex.age / ex.maxAge;
   ctx.save(); ctx.globalAlpha = 1 - t;
+  ex.particles.forEach((p) => {
+    const px = ex.x + p.vx * ex.age * p.drag;
