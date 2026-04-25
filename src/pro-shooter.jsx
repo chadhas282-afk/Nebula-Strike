@@ -275,3 +275,6 @@ function drawHUD(ctx, state) {
   const { score, lives, shieldHp, rapidTimer, bombs, combo, comboTimer, level, bossHp, bossMaxHp } = state;
 ctx.fillStyle = "rgba(0,5,18,0.82)";
   ctx.fillRect(0, 0, W, 44);
+  ctx.strokeStyle = "rgba(0,212,255,0.12)";
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(0, 44); ctx.lineTo(W, 44); ctx.stroke();
