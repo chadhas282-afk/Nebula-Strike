@@ -255,3 +255,6 @@ function drawExplosion(ctx, ex) {
 
 function drawPowerup(ctx, p, frame) {
   if (!p.alive) return;
+  const spin = frame * 0.06;
+  const colors = { shield: PALETTE.shield, rapid: PALETTE.rapid, bomb: PALETTE.bomb };
+  const labels = { shield: "S", rapid: "R", bomb: "B" };
