@@ -285,3 +285,5 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     ctx.fillStyle = PALETTE.hud; ctx.font = "bold 20px 'Courier New', monospace";
     ctx.fillText(String(score).padStart(7, "0"), 16, 36);
   });
+  ctx.fillStyle = PALETTE.hudDim; ctx.font = "10px 'Courier New', monospace";
+  ctx.fillText("LEVEL", W / 2 - 20, 16);
