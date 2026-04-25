@@ -258,3 +258,5 @@ function drawPowerup(ctx, p, frame) {
   const spin = frame * 0.06;
   const colors = { shield: PALETTE.shield, rapid: PALETTE.rapid, bomb: PALETTE.bomb };
   const labels = { shield: "S", rapid: "R", bomb: "B" };
+  ctx.save(); ctx.translate(p.x + 14, p.y + 14);
+  ctx.rotate(spin);
