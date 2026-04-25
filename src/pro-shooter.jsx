@@ -247,3 +247,6 @@ function drawExplosion(ctx, ex) {
     const px = ex.x + p.vx * ex.age * p.drag;
     const py = ex.y + p.vy * ex.age * p.drag;
     ctx.fillStyle = p.color;
+    ctx.shadowColor = p.color; ctx.shadowBlur = 8;
+    ctx.beginPath(); ctx.arc(px, py, p.r * (1 - t * 0.6), 0, Math.PI * 2); ctx.fill();
+  });
