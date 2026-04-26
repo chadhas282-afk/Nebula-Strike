@@ -359,3 +359,10 @@ function drawScanlines(ctx) {
   }
   ctx.restore();
 }
+
+function drawVignette(ctx) {
+  const grad = ctx.createRadialGradient(W / 2, H / 2, H * 0.32, W / 2, H / 2, H * 0.82);
+  grad.addColorStop(0, "rgba(0,0,0,0)");
+  grad.addColorStop(1, "rgba(0,0,8,0.55)");
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
+}
