@@ -338,3 +338,6 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     ctx.fillStyle = "rgba(0,5,18,0.7)"; ctx.fillRect(W / 2 - 160, H - 46, 320, 28);
     ctx.strokeStyle = "rgba(255,50,80,0.3)"; ctx.lineWidth = 1;
     ctx.strokeRect(W / 2 - 160, H - 46, 320, 28);
+    ctx.fillStyle = PALETTE.hudDim; ctx.font = "9px 'Courier New', monospace";
+    ctx.textAlign = "center"; ctx.fillText("BOSS", W / 2, H - 34);
+    ctx.fillStyle = "rgba(80,0,20,0.5)";
