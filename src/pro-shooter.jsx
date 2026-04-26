@@ -392,3 +392,7 @@ function drawTitleScreen(ctx, frame) {
   const pulse = Math.sin(frame * 0.04) * 0.12 + 0.88;
   ctx.save(); ctx.textAlign = "center";
   ctx.font = "bold 64px 'Courier New', monospace";
+  glow(ctx, "#00d4ff", 40 * pulse, () => {
+    ctx.fillStyle = `rgba(0,212,255,${pulse})`;
+    ctx.fillText("NEBULA", W / 2, H * 0.34);
+  });
