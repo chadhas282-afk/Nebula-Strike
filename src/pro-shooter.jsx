@@ -322,3 +322,7 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     const alpha = Math.min(1, comboTimer / 40);
     ctx.save(); ctx.globalAlpha = alpha;
     ctx.fillStyle = PALETTE.amber;
+     ctx.font = "bold 22px 'Courier New', monospace";
+    ctx.textAlign = "center";
+    glow(ctx, PALETTE.amber, 14, () => {
+      ctx.fillText(`${combo}× COMBO`, W / 2, H - 20);
