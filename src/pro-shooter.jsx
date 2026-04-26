@@ -298,3 +298,7 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
      glow(ctx, PALETTE.playerGlow, 6, () => {
       ctx.fillStyle = i < lives ? PALETTE.player : "rgba(0,200,255,0.15)";
       ctx.beginPath();
+      ctx.moveTo(lx + 8, ly - 8); ctx.lineTo(lx + 16, ly + 4); ctx.lineTo(lx, ly + 4);
+      ctx.closePath(); ctx.fill();
+    });
+  }
