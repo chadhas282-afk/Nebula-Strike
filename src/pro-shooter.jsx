@@ -318,3 +318,7 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     ctx.beginPath(); ctx.arc(W - 22 - i * 16, 58, 5, 0, Math.PI * 2); ctx.fill();
     ctx.shadowBlur = 0;
   }
+  if (comboTimer > 0 && combo > 1) {
+    const alpha = Math.min(1, comboTimer / 40);
+    ctx.save(); ctx.globalAlpha = alpha;
+    ctx.fillStyle = PALETTE.amber;
