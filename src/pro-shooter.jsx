@@ -366,3 +366,10 @@ function drawVignette(ctx) {
   grad.addColorStop(1, "rgba(0,0,8,0.55)");
   ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
 }
+function drawTitleScreen(ctx, frame) {
+  ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
+
+  [
+    { x: W * 0.3, y: H * 0.4, rx: 200, ry: 130, hue: 220, a: 0.04 },
+    { x: W * 0.72, y: H * 0.55, rx: 160, ry: 100, hue: 280, a: 0.035 },
+  ].forEach(n => {
