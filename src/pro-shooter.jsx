@@ -329,3 +329,8 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
        });
     ctx.restore();
   }
+  if (rapidTimer > 0) {
+    ctx.fillStyle = PALETTE.rapid;
+    ctx.font = "10px 'Courier New', monospace";
+    glow(ctx, PALETTE.rapid, 10, () => ctx.fillText("⚡ RAPID", 140, 36));
+  }
