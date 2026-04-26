@@ -302,3 +302,6 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
       ctx.closePath(); ctx.fill();
     });
   }
+  if (shieldHp > 0) {
+    ctx.fillStyle = PALETTE.hudDim; ctx.font = "9px 'Courier New', monospace";
+    ctx.fillText("SHIELD", 18, 58);
