@@ -351,3 +351,11 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     });
   }
 }
+function drawScanlines(ctx) {
+  ctx.save(); ctx.globalAlpha = 0.045;
+  for (let y = 0; y < H; y += 3) {
+    ctx.fillStyle = "#000";
+    ctx.fillRect(0, y, W, 1.5);
+  }
+  ctx.restore();
+}
