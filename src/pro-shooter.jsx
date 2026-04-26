@@ -344,3 +344,10 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     roundRect(ctx, W / 2 - 150, H - 30, 300, 10, 3); ctx.fill();
     const bpct = clamp(bossHp / bossMaxHp, 0, 1);
     glow(ctx, "#ff2050", 8, () => {
+      const grad = ctx.createLinearGradient(W / 2 - 150, 0, W / 2 + 150, 0);
+      grad.addColorStop(0, "#ff4d6d"); grad.addColorStop(1, "#ff8020");
+      ctx.fillStyle = grad;
+      roundRect(ctx, W / 2 - 150, H - 30, 300 * bpct, 10, 3); ctx.fill();
+    });
+  }
+}
