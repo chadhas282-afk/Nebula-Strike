@@ -241,7 +241,7 @@ function drawEnemyBullet(ctx, b, frame) {
 }
 
 function drawExplosion(ctx, ex) {
-      const t = ex.age / ex.maxAge;
+  const t = ex.age / ex.maxAge;
   ctx.save(); ctx.globalAlpha = 1 - t;
   ex.particles.forEach((p) => {
     const px = ex.x + p.vx * ex.age * p.drag;
@@ -273,7 +273,8 @@ function drawPowerup(ctx, p, frame) {
 
 function drawHUD(ctx, state) {
   const { score, lives, shieldHp, rapidTimer, bombs, combo, comboTimer, level, bossHp, bossMaxHp } = state;
-ctx.fillStyle = "rgba(0,5,18,0.82)";
+
+  ctx.fillStyle = "rgba(0,5,18,0.82)";
   ctx.fillRect(0, 0, W, 44);
   ctx.strokeStyle = "rgba(0,212,255,0.12)";
   ctx.lineWidth = 1;
@@ -285,55 +286,62 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     ctx.fillStyle = PALETTE.hud; ctx.font = "bold 20px 'Courier New', monospace";
     ctx.fillText(String(score).padStart(7, "0"), 16, 36);
   });
+
   ctx.fillStyle = PALETTE.hudDim; ctx.font = "10px 'Courier New', monospace";
   ctx.fillText("LEVEL", W / 2 - 20, 16);
   glow(ctx, PALETTE.amber, 6, () => {
     ctx.fillStyle = PALETTE.amber; ctx.font = "bold 20px 'Courier New', monospace";
     ctx.fillText(String(level).padStart(2, "0"), W / 2 - 12, 36);
   });
+
   ctx.fillStyle = PALETTE.hudDim; ctx.font = "10px 'Courier New', monospace";
   ctx.fillText("FLEET", W - 130, 16);
   for (let i = 0; i < lives; i++) {
     const lx = W - 122 + i * 22, ly = 26;
-     glow(ctx, PALETTE.playerGlow, 6, () => {
+    glow(ctx, PALETTE.playerGlow, 6, () => {
       ctx.fillStyle = i < lives ? PALETTE.player : "rgba(0,200,255,0.15)";
       ctx.beginPath();
       ctx.moveTo(lx + 8, ly - 8); ctx.lineTo(lx + 16, ly + 4); ctx.lineTo(lx, ly + 4);
       ctx.closePath(); ctx.fill();
     });
   }
+
   if (shieldHp > 0) {
     ctx.fillStyle = PALETTE.hudDim; ctx.font = "9px 'Courier New', monospace";
     ctx.fillText("SHIELD", 18, 58);
-     ctx.fillStyle = "rgba(40,100,160,0.3)";
+    ctx.fillStyle = "rgba(40,100,160,0.3)";
     roundRect(ctx, 18, 62, 100, 6, 3); ctx.fill();
     glow(ctx, PALETTE.shield, 6, () => {
       ctx.fillStyle = PALETTE.shield;
       roundRect(ctx, 18, 62, (shieldHp / 3) * 100, 6, 3); ctx.fill();
     });
   }
+
   for (let i = 0; i < bombs; i++) {
     ctx.fillStyle = PALETTE.bomb;
     ctx.shadowColor = PALETTE.bomb; ctx.shadowBlur = 8;
     ctx.beginPath(); ctx.arc(W - 22 - i * 16, 58, 5, 0, Math.PI * 2); ctx.fill();
     ctx.shadowBlur = 0;
   }
+
   if (comboTimer > 0 && combo > 1) {
     const alpha = Math.min(1, comboTimer / 40);
     ctx.save(); ctx.globalAlpha = alpha;
     ctx.fillStyle = PALETTE.amber;
-     ctx.font = "bold 22px 'Courier New', monospace";
+    ctx.font = "bold 22px 'Courier New', monospace";
     ctx.textAlign = "center";
     glow(ctx, PALETTE.amber, 14, () => {
       ctx.fillText(`${combo}× COMBO`, W / 2, H - 20);
-       });
+    });
     ctx.restore();
   }
+
   if (rapidTimer > 0) {
     ctx.fillStyle = PALETTE.rapid;
     ctx.font = "10px 'Courier New', monospace";
     glow(ctx, PALETTE.rapid, 10, () => ctx.fillText("⚡ RAPID", 140, 36));
   }
+
   if (bossHp > 0 && bossMaxHp > 0) {
     ctx.fillStyle = "rgba(0,5,18,0.7)"; ctx.fillRect(W / 2 - 160, H - 46, 320, 28);
     ctx.strokeStyle = "rgba(255,50,80,0.3)"; ctx.lineWidth = 1;
@@ -351,6 +359,7 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     });
   }
 }
+
 function drawScanlines(ctx) {
   ctx.save(); ctx.globalAlpha = 0.045;
   for (let y = 0; y < H; y += 3) {
@@ -366,6 +375,7 @@ function drawVignette(ctx) {
   grad.addColorStop(1, "rgba(0,0,8,0.55)");
   ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
 }
+
 function drawTitleScreen(ctx, frame) {
   ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
 
@@ -378,3 +388,7 @@ function drawTitleScreen(ctx, frame) {
     g.addColorStop(1, "transparent");
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   });
+
+  const pulse = Math.sin(frame * 0.04) * 0.12 + 0.88;
+  ctx.save(); ctx.textAlign = "center";
+  ctx.font = "bold 64px 'Courier New', monospace";
