@@ -373,3 +373,8 @@ function drawTitleScreen(ctx, frame) {
     { x: W * 0.3, y: H * 0.4, rx: 200, ry: 130, hue: 220, a: 0.04 },
     { x: W * 0.72, y: H * 0.55, rx: 160, ry: 100, hue: 280, a: 0.035 },
   ].forEach(n => {
+    const g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.rx);
+    g.addColorStop(0, `hsla(${n.hue},80%,55%,${n.a})`);
+    g.addColorStop(1, "transparent");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  });
