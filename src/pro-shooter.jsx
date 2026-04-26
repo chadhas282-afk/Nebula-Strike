@@ -305,3 +305,6 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
   if (shieldHp > 0) {
     ctx.fillStyle = PALETTE.hudDim; ctx.font = "9px 'Courier New', monospace";
     ctx.fillText("SHIELD", 18, 58);
+     ctx.fillStyle = "rgba(40,100,160,0.3)";
+    roundRect(ctx, 18, 62, 100, 6, 3); ctx.fill();
+    glow(ctx, PALETTE.shield, 6, () => {
