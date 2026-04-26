@@ -312,3 +312,9 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
       roundRect(ctx, 18, 62, (shieldHp / 3) * 100, 6, 3); ctx.fill();
     });
   }
+  for (let i = 0; i < bombs; i++) {
+    ctx.fillStyle = PALETTE.bomb;
+    ctx.shadowColor = PALETTE.bomb; ctx.shadowBlur = 8;
+    ctx.beginPath(); ctx.arc(W - 22 - i * 16, 58, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.shadowBlur = 0;
+  }
