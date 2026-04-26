@@ -396,3 +396,7 @@ function drawTitleScreen(ctx, frame) {
     ctx.fillStyle = `rgba(0,212,255,${pulse})`;
     ctx.fillText("NEBULA", W / 2, H * 0.34);
   });
+  glow(ctx, "#ff4d6d", 30 * pulse, () => {
+    ctx.fillStyle = `rgba(255,77,109,${pulse})`;
+    ctx.fillText("STRIKE", W / 2, H * 0.34 + 68);
+  });
