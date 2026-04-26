@@ -326,3 +326,6 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     ctx.textAlign = "center";
     glow(ctx, PALETTE.amber, 14, () => {
       ctx.fillText(`${combo}× COMBO`, W / 2, H - 20);
+       });
+    ctx.restore();
+  }
