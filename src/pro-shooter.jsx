@@ -341,3 +341,6 @@ ctx.fillStyle = "rgba(0,5,18,0.82)";
     ctx.fillStyle = PALETTE.hudDim; ctx.font = "9px 'Courier New', monospace";
     ctx.textAlign = "center"; ctx.fillText("BOSS", W / 2, H - 34);
     ctx.fillStyle = "rgba(80,0,20,0.5)";
+    roundRect(ctx, W / 2 - 150, H - 30, 300, 10, 3); ctx.fill();
+    const bpct = clamp(bossHp / bossMaxHp, 0, 1);
+    glow(ctx, "#ff2050", 8, () => {
