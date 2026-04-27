@@ -494,3 +494,10 @@ export default function App() {
           g.bombs--;
           g.enemies.forEach(e => { if (e.alive) { e.alive = false; g.score += 30; } });
           g.enemyBullets = [];
+          g.screenShake = 20;
+          const cx = W / 2, cy = H / 2;
+          for (let i = 0; i < 5; i++)
+            g.explosions.push(mkExplosion(rnd(80, W - 80), rnd(60, H - 120), ["#ff4d6d","#ffa030","#ffd700"][i % 3], 24));
+        }
+      }
+    };
