@@ -486,3 +486,7 @@ export default function App() {
       if (["Space", "ArrowLeft", "ArrowRight"].includes(e.code)) e.preventDefault();
       if ((e.code === "Space" || e.code === "Enter")) {
         const ph = G.current ? G.current.phase : "title";
+        if (ph === "title" || ph === "gameover" || ph === "win") initGame();
+      }
+      if (e.code === "KeyB" && G.current && G.current.phase === "playing") {
+        const g = G.current;
