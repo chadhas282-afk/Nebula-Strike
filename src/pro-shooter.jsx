@@ -400,3 +400,7 @@ function drawTitleScreen(ctx, frame) {
     ctx.fillStyle = `rgba(255,77,109,${pulse})`;
     ctx.fillText("STRIKE", W / 2, H * 0.34 + 68);
   });
+
+  ctx.fillStyle = "rgba(140,200,220,0.7)";
+  ctx.font = "14px 'Courier New', monospace";
+  ctx.fillText("DEFEND THE GALAXY — DESTROY THE HORDE", W / 2, H * 0.34 + 106);
