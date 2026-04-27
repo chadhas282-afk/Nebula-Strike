@@ -423,3 +423,7 @@ function drawGameOver(ctx, score, frame, win) {
   ctx.fillStyle = "rgba(2,4,20,0.88)"; ctx.fillRect(0, 0, W, H);
   ctx.textAlign = "center";
   const col = win ? PALETTE.green : PALETTE.accent;
+  glow(ctx, col, 30, () => {
+    ctx.fillStyle = col; ctx.font = "bold 54px 'Courier New', monospace";
+    ctx.fillText(win ? "VICTORY!" : "GAME OVER", W / 2, H * 0.38);
+  });
