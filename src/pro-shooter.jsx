@@ -472,3 +472,10 @@ export default function App() {
       enemyShootTimer: 0,
       enemyShootInterval: 78,
       bulletCooldown: 0,
+       keys: {},
+      bossHp: 0,
+      bossMaxHp: 0,
+      lastKillFrame: -999,
+    };
+    setPhase("playing");
+  }, []);
