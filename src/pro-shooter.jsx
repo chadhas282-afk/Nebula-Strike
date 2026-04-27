@@ -436,3 +436,8 @@ function drawGameOver(ctx, score, frame, win) {
     });
   }
 }
+
+export default function App() {
+  const cvs = useRef(null);
+  const G = useRef(null);
+  const raf = useRef(null);
