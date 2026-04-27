@@ -408,3 +408,7 @@ function drawTitleScreen(ctx, frame) {
   if (Math.floor(frame / 35) % 2 === 0) {
     glow(ctx, PALETTE.amber, 10, () => {
       ctx.fillStyle = PALETTE.amber;
+      ctx.font = "15px 'Courier New', monospace";
+      ctx.fillText("PRESS  SPACE  OR  ENTER  TO  LAUNCH", W / 2, H * 0.78);
+    });
+  }
