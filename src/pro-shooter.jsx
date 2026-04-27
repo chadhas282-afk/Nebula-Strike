@@ -441,3 +441,5 @@ export default function App() {
   const cvs = useRef(null);
   const G = useRef(null);
   const raf = useRef(null);
+  const [uiScore, setUiScore] = useState(0);
+  const [phase, setPhase] = useState("title");
