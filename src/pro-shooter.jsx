@@ -490,3 +490,7 @@ export default function App() {
       }
       if (e.code === "KeyB" && G.current && G.current.phase === "playing") {
         const g = G.current;
+        if (g.bombs > 0) {
+          g.bombs--;
+          g.enemies.forEach(e => { if (e.alive) { e.alive = false; g.score += 30; } });
+          g.enemyBullets = [];
