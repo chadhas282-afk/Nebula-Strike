@@ -430,3 +430,9 @@ function drawGameOver(ctx, score, frame, win) {
     ctx.fillStyle = "rgba(160,210,230,0.85)"; ctx.font = "18px 'Courier New', monospace";
   ctx.fillText(`FINAL SCORE  ${String(score).padStart(7, "0")}`, W / 2, H * 0.38 + 54);
   if (Math.floor(frame / 35) % 2 === 0) {
+    glow(ctx, PALETTE.amber, 10, () => {
+      ctx.fillStyle = PALETTE.amber; ctx.font = "14px 'Courier New', monospace";
+      ctx.fillText("PRESS  SPACE  TO  PLAY  AGAIN", W / 2, H * 0.72);
+    });
+  }
+}
