@@ -412,3 +412,9 @@ function drawTitleScreen(ctx, frame) {
       ctx.fillText("PRESS  SPACE  OR  ENTER  TO  LAUNCH", W / 2, H * 0.78);
     });
   }
+
+  ctx.fillStyle = "rgba(80,130,160,0.7)"; ctx.font = "12px 'Courier New', monospace";
+  ctx.fillText("← → MOVE   SPACE FIRE   B BOMB   COLLECT POWER-UPS", W / 2, H * 0.88);
+
+  ctx.restore();
+}
