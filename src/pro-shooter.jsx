@@ -418,3 +418,8 @@ function drawTitleScreen(ctx, frame) {
 
   ctx.restore();
 }
+
+function drawGameOver(ctx, score, frame, win) {
+  ctx.fillStyle = "rgba(2,4,20,0.88)"; ctx.fillRect(0, 0, W, H);
+  ctx.textAlign = "center";
+  const col = win ? PALETTE.green : PALETTE.accent;
