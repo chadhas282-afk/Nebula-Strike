@@ -443,3 +443,12 @@ export default function App() {
   const raf = useRef(null);
   const [uiScore, setUiScore] = useState(0);
   const [phase, setPhase] = useState("title");
+
+
+  const initGame = useCallback(() => {
+    G.current = {
+      phase: "playing",
+      frame: 0,
+      score: 0,
+      level: 1,
+      lives: 3,
