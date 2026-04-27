@@ -483,3 +483,6 @@ export default function App() {
   useEffect(() => {
     const dn = (e) => {
       if (G.current) G.current.keys[e.code] = true;
+      if (["Space", "ArrowLeft", "ArrowRight"].includes(e.code)) e.preventDefault();
+      if ((e.code === "Space" || e.code === "Enter")) {
+        const ph = G.current ? G.current.phase : "title";
