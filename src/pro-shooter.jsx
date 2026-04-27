@@ -479,3 +479,7 @@ export default function App() {
     };
     setPhase("playing");
   }, []);
+
+  useEffect(() => {
+    const dn = (e) => {
+      if (G.current) G.current.keys[e.code] = true;
