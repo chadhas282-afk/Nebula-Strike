@@ -552,3 +552,8 @@ export default function App() {
       const spd = PLAYER_SPD * dt;
       if ((g.keys["ArrowLeft"] || g.keys["KeyA"]) && p.x > 0) p.x -= spd;
       if ((g.keys["ArrowRight"] || g.keys["KeyD"]) && p.x < W - PW) p.x += spd;
+
+      if (g.bulletCooldown > 0) g.bulletCooldown -= dt;
+      const cooldown = g.rapidTimer > 0 ? 5 : 13;
+      if ((g.keys["Space"] || g.keys["ArrowUp"]) && g.bulletCooldown <= 0) {
+        g.bullets.push({ x: p.x + PW / 2 - BW / 2, y: p.y - BH });
