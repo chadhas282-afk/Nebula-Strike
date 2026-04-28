@@ -528,3 +528,6 @@ export default function App() {
       const g = G.current;
       const dt = 1;
       g.frame += dt;
+
+       g.stars.forEach(s => { s.y += s.spd * dt; if (s.y > H) { s.y = 0; s.x = rnd(0, W); } });
+      g.nebula.forEach(n => { n.y += 0.04 * dt; if (n.y > H + n.ry) n.y = -n.ry; });
