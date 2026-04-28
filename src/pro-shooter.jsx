@@ -536,3 +536,8 @@ export default function App() {
         ctx.clearRect(0, 0, W, H);
         ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
         g.stars.forEach(s => {
+          ctx.globalAlpha = s.bright * 0.7;
+          ctx.fillStyle = "#c8dcff";
+          ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
+          ctx.globalAlpha = 1;
+        });
