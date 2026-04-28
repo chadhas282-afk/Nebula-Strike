@@ -567,3 +567,5 @@ export default function App() {
       g.bullets = g.bullets.filter(b => { b.y -= BULLET_SPD * dt; return b.y > -BH; });
       g.enemyBullets = g.enemyBullets.filter(b => { b.y += ENEMY_BULLET_SPD * dt; return b.y < H; });
       if (g.rapidTimer > 0) g.rapidTimer -= dt;
+      if (g.comboTimer > 0) g.comboTimer -= dt;
+      else if (g.comboTimer <= 0 && g.combo > 0) g.combo = 0;
