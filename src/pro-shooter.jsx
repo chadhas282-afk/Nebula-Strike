@@ -577,3 +577,7 @@ export default function App() {
        if (g.enemyStepTimer >= g.enemyStepInterval * speedMult) {
         g.enemyStepTimer = 0;
         const minX = Math.min(...alive.map(e => e.x));
+        const maxX = Math.max(...alive.map(e => e.x));
+        if ((g.enemyDir > 0 && maxX + EW + 10 >= W) || (g.enemyDir < 0 && minX - 10 <= 0)) {
+          g.enemyDir *= -1;
+          g.enemies.forEach(e => { if (e.alive) e.y += 16; });
