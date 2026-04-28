@@ -560,3 +560,6 @@ export default function App() {
         if (g.rapidTimer > 0) {
           g.bullets.push({ x: p.x + 6, y: p.y });
           g.bullets.push({ x: p.x + PW - 10, y: p.y });
+           }
+        g.bulletCooldown = cooldown;
+      }
