@@ -523,3 +523,8 @@ export default function App() {
          bossHp: 0, bossMaxHp: 0, lastKillFrame: -999,
       };
     }
+
+    function tick() {
+      const g = G.current;
+      const dt = 1;
+      g.frame += dt;
