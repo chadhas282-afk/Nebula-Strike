@@ -544,3 +544,6 @@ export default function App() {
         if (g.phase === "title") drawTitleScreen(ctx, g.frame);
         else drawGameOver(ctx, g.score, g.frame, g.phase === "win");
         drawScanlines(ctx);
+        raf.current = requestAnimationFrame(tick);
+        return;
+      }
