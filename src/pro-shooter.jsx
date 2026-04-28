@@ -574,3 +574,6 @@ export default function App() {
       const alive = g.enemies.filter(e => e.alive);
       const speedMult = Math.max(0.32, 1 - (alive.length / (ROWS * COLS)) * 0.68);
       g.enemyStepTimer += dt;
+       if (g.enemyStepTimer >= g.enemyStepInterval * speedMult) {
+        g.enemyStepTimer = 0;
+        const minX = Math.min(...alive.map(e => e.x));
