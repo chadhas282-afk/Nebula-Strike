@@ -547,3 +547,8 @@ export default function App() {
         raf.current = requestAnimationFrame(tick);
         return;
       }
+
+      const p = g.player;
+      const spd = PLAYER_SPD * dt;
+      if ((g.keys["ArrowLeft"] || g.keys["KeyA"]) && p.x > 0) p.x -= spd;
+      if ((g.keys["ArrowRight"] || g.keys["KeyD"]) && p.x < W - PW) p.x += spd;
