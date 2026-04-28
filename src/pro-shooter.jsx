@@ -506,7 +506,13 @@ export default function App() {
     window.addEventListener("keyup", up);
     return () => { window.removeEventListener("keydown", dn); window.removeEventListener("keyup", up); };
   }, [initGame]);
-  
+
     useEffect(() => {
     const canvas = cvs.current;
     const ctx = canvas.getContext("2d");
+
+    if (!G.current) {
+      G.current = {
+        phase: "title", frame: 0, score: 0, level: 1,
+        stars: mkStars(120), nebula: mkNebula(), keys: {},
+        lives: 3, shieldHp: 0, rapidTimer: 0, bombs: 2, combo: 0, comboTimer: 0,
