@@ -569,3 +569,8 @@ export default function App() {
       if (g.rapidTimer > 0) g.rapidTimer -= dt;
       if (g.comboTimer > 0) g.comboTimer -= dt;
       else if (g.comboTimer <= 0 && g.combo > 0) g.combo = 0;
+
+       g.enemies.forEach(e => { if (e.flashAge > 0) e.flashAge--; });
+      const alive = g.enemies.filter(e => e.alive);
+      const speedMult = Math.max(0.32, 1 - (alive.length / (ROWS * COLS)) * 0.68);
+      g.enemyStepTimer += dt;
