@@ -501,3 +501,8 @@ export default function App() {
         }
       }
     };
+    const up = (e) => { if (G.current) G.current.keys[e.code] = false; };
+    window.addEventListener("keydown", dn);
+    window.addEventListener("keyup", up);
+    return () => { window.removeEventListener("keydown", dn); window.removeEventListener("keyup", up); };
+  }, [initGame]);
