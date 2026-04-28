@@ -506,3 +506,7 @@ export default function App() {
     window.addEventListener("keyup", up);
     return () => { window.removeEventListener("keydown", dn); window.removeEventListener("keyup", up); };
   }, [initGame]);
+  
+    useEffect(() => {
+    const canvas = cvs.current;
+    const ctx = canvas.getContext("2d");
