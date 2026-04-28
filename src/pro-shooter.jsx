@@ -520,3 +520,6 @@ export default function App() {
         bullets: [], enemyBullets: [], enemies: mkEnemies(1), explosions: [], powerups: [],
         enemyDir: 1, enemyStepTimer: 0, enemyStepInterval: 34,
         enemyShootTimer: 0, enemyShootInterval: 78, bulletCooldown: 0,
+         bossHp: 0, bossMaxHp: 0, lastKillFrame: -999,
+      };
+    }
