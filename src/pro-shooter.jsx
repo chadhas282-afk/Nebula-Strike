@@ -531,3 +531,8 @@ export default function App() {
 
        g.stars.forEach(s => { s.y += s.spd * dt; if (s.y > H) { s.y = 0; s.x = rnd(0, W); } });
       g.nebula.forEach(n => { n.y += 0.04 * dt; if (n.y > H + n.ry) n.y = -n.ry; });
+
+      if (g.phase !== "playing") {
+        ctx.clearRect(0, 0, W, H);
+        ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
+        g.stars.forEach(s => {
