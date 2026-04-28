@@ -557,3 +557,6 @@ export default function App() {
       const cooldown = g.rapidTimer > 0 ? 5 : 13;
       if ((g.keys["Space"] || g.keys["ArrowUp"]) && g.bulletCooldown <= 0) {
         g.bullets.push({ x: p.x + PW / 2 - BW / 2, y: p.y - BH });
+        if (g.rapidTimer > 0) {
+          g.bullets.push({ x: p.x + 6, y: p.y });
+          g.bullets.push({ x: p.x + PW - 10, y: p.y });
