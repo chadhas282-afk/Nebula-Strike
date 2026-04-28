@@ -516,3 +516,7 @@ export default function App() {
         phase: "title", frame: 0, score: 0, level: 1,
         stars: mkStars(120), nebula: mkNebula(), keys: {},
         lives: 3, shieldHp: 0, rapidTimer: 0, bombs: 2, combo: 0, comboTimer: 0,
+         screenShake: 0, player: { x: W / 2 - PW / 2, y: H - 80 },
+        bullets: [], enemyBullets: [], enemies: mkEnemies(1), explosions: [], powerups: [],
+        enemyDir: 1, enemyStepTimer: 0, enemyStepInterval: 34,
+        enemyShootTimer: 0, enemyShootInterval: 78, bulletCooldown: 0,
