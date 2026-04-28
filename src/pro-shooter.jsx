@@ -541,3 +541,6 @@ export default function App() {
           ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
           ctx.globalAlpha = 1;
         });
+        if (g.phase === "title") drawTitleScreen(ctx, g.frame);
+        else drawGameOver(ctx, g.score, g.frame, g.phase === "win");
+        drawScanlines(ctx);
