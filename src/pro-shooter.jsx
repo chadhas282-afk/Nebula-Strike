@@ -615,3 +615,6 @@ export default function App() {
               else { g.combo = 1; g.comboTimer = 90; }
               const pts = (ROWS - e.r) * 10 * Math.max(1, g.combo);
               g.score += pts;
+              const ecol = PALETTE.enemyColors[e.r % 4];
+              g.explosions.push(mkExplosion(e.x + EW / 2, e.y + EH / 2, ecol, 18));
+              g.screenShake = Math.min(g.screenShake + 3, 10);
