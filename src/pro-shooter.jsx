@@ -658,3 +658,7 @@ export default function App() {
         g.enemies = mkEnemies(g.level);
         g.enemyBullets = [];
         g.bullets = [];
+        g.enemyStepInterval = Math.max(14, 34 - g.level * 2.5);
+        g.enemyShootInterval = Math.max(24, 78 - g.level * 8);
+        if (g.level % 3 === 0) g.bombs = Math.min(g.bombs + 1, 5);
+      }
