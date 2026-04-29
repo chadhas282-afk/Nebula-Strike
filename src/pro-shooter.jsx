@@ -645,3 +645,8 @@ export default function App() {
          if (rect(pu.x, pu.y, 28, 28, p.x, p.y, PW, PH)) {
           if (pu.type === "shield") g.shieldHp = 3;
           else if (pu.type === "rapid") g.rapidTimer = 300;
+          else if (pu.type === "bomb") g.bombs = Math.min(g.bombs + 1, 5);
+          return false;
+        }
+        return true;
+      });
