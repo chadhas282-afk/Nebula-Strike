@@ -618,3 +618,8 @@ export default function App() {
               const ecol = PALETTE.enemyColors[e.r % 4];
               g.explosions.push(mkExplosion(e.x + EW / 2, e.y + EH / 2, ecol, 18));
               g.screenShake = Math.min(g.screenShake + 3, 10);
+               if (rnd(0, 1) < 0.12) g.powerups.push(mkPowerup(e.x + EW / 2 - 14, e.y));
+            }
+          }
+        }
+      }
