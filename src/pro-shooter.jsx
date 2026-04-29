@@ -581,3 +581,7 @@ export default function App() {
         if ((g.enemyDir > 0 && maxX + EW + 10 >= W) || (g.enemyDir < 0 && minX - 10 <= 0)) {
           g.enemyDir *= -1;
           g.enemies.forEach(e => { if (e.alive) e.y += 16; });
+           } else {
+          g.enemies.forEach(e => { if (e.alive) e.x += 20 * g.enemyDir; });
+        }
+      }
