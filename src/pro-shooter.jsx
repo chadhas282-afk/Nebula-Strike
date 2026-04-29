@@ -623,3 +623,8 @@ export default function App() {
           }
         }
       }
+
+      for (const b of g.enemyBullets) {
+        if (rect(b.x, b.y, 6, 14, p.x + 8, p.y, PW - 16, PH)) {
+          b.y = H + 999;
+          if (g.shieldHp > 0) {
