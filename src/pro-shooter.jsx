@@ -611,3 +611,7 @@ export default function App() {
               e.alive = false;
               const gap = g.frame - g.lastKillFrame;
               g.lastKillFrame = g.frame;
+              if (gap < 50) { g.combo++; g.comboTimer = 90; }
+              else { g.combo = 1; g.comboTimer = 90; }
+              const pts = (ROWS - e.r) * 10 * Math.max(1, g.combo);
+              g.score += pts;
