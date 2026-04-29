@@ -662,3 +662,5 @@ export default function App() {
         g.enemyShootInterval = Math.max(24, 78 - g.level * 8);
         if (g.level % 3 === 0) g.bombs = Math.min(g.bombs + 1, 5);
       }
+        g.explosions = g.explosions.filter(ex => { ex.age += dt; return ex.age < ex.maxAge; });
+      if (g.screenShake > 0) g.screenShake -= 0.8;
