@@ -590,3 +590,6 @@ export default function App() {
       g.enemyShootTimer += dt;
       if (g.enemyShootTimer >= g.enemyShootInterval && alive.length > 0) {
         g.enemyShootTimer = 0;
+        const cols = [...new Set(alive.map(e => e.c))];
+        const col = cols[rndInt(0, cols.length - 1)];
+        const colE = alive.filter(e => e.c === col);
