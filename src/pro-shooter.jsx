@@ -427,7 +427,7 @@ function drawGameOver(ctx, score, frame, win) {
     ctx.fillStyle = col; ctx.font = "bold 54px 'Courier New', monospace";
     ctx.fillText(win ? "VICTORY!" : "GAME OVER", W / 2, H * 0.38);
   });
-    ctx.fillStyle = "rgba(160,210,230,0.85)"; ctx.font = "18px 'Courier New', monospace";
+  ctx.fillStyle = "rgba(160,210,230,0.85)"; ctx.font = "18px 'Courier New', monospace";
   ctx.fillText(`FINAL SCORE  ${String(score).padStart(7, "0")}`, W / 2, H * 0.38 + 54);
   if (Math.floor(frame / 35) % 2 === 0) {
     glow(ctx, PALETTE.amber, 10, () => {
@@ -437,13 +437,13 @@ function drawGameOver(ctx, score, frame, win) {
   }
 }
 
+
 export default function App() {
   const cvs = useRef(null);
   const G = useRef(null);
   const raf = useRef(null);
   const [uiScore, setUiScore] = useState(0);
   const [phase, setPhase] = useState("title");
-
 
   const initGame = useCallback(() => {
     G.current = {
@@ -472,7 +472,7 @@ export default function App() {
       enemyShootTimer: 0,
       enemyShootInterval: 78,
       bulletCooldown: 0,
-       keys: {},
+      keys: {},
       bossHp: 0,
       bossMaxHp: 0,
       lastKillFrame: -999,
@@ -507,7 +507,7 @@ export default function App() {
     return () => { window.removeEventListener("keydown", dn); window.removeEventListener("keyup", up); };
   }, [initGame]);
 
-    useEffect(() => {
+  useEffect(() => {
     const canvas = cvs.current;
     const ctx = canvas.getContext("2d");
 
@@ -516,11 +516,11 @@ export default function App() {
         phase: "title", frame: 0, score: 0, level: 1,
         stars: mkStars(120), nebula: mkNebula(), keys: {},
         lives: 3, shieldHp: 0, rapidTimer: 0, bombs: 2, combo: 0, comboTimer: 0,
-         screenShake: 0, player: { x: W / 2 - PW / 2, y: H - 80 },
+        screenShake: 0, player: { x: W / 2 - PW / 2, y: H - 80 },
         bullets: [], enemyBullets: [], enemies: mkEnemies(1), explosions: [], powerups: [],
         enemyDir: 1, enemyStepTimer: 0, enemyStepInterval: 34,
         enemyShootTimer: 0, enemyShootInterval: 78, bulletCooldown: 0,
-         bossHp: 0, bossMaxHp: 0, lastKillFrame: -999,
+        bossHp: 0, bossMaxHp: 0, lastKillFrame: -999,
       };
     }
 
@@ -529,7 +529,7 @@ export default function App() {
       const dt = 1;
       g.frame += dt;
 
-       g.stars.forEach(s => { s.y += s.spd * dt; if (s.y > H) { s.y = 0; s.x = rnd(0, W); } });
+      g.stars.forEach(s => { s.y += s.spd * dt; if (s.y > H) { s.y = 0; s.x = rnd(0, W); } });
       g.nebula.forEach(n => { n.y += 0.04 * dt; if (n.y > H + n.ry) n.y = -n.ry; });
 
       if (g.phase !== "playing") {
@@ -560,7 +560,7 @@ export default function App() {
         if (g.rapidTimer > 0) {
           g.bullets.push({ x: p.x + 6, y: p.y });
           g.bullets.push({ x: p.x + PW - 10, y: p.y });
-           }
+        }
         g.bulletCooldown = cooldown;
       }
 
@@ -570,22 +570,21 @@ export default function App() {
       if (g.comboTimer > 0) g.comboTimer -= dt;
       else if (g.comboTimer <= 0 && g.combo > 0) g.combo = 0;
 
-       g.enemies.forEach(e => { if (e.flashAge > 0) e.flashAge--; });
+      g.enemies.forEach(e => { if (e.flashAge > 0) e.flashAge--; });
       const alive = g.enemies.filter(e => e.alive);
       const speedMult = Math.max(0.32, 1 - (alive.length / (ROWS * COLS)) * 0.68);
       g.enemyStepTimer += dt;
-       if (g.enemyStepTimer >= g.enemyStepInterval * speedMult) {
+      if (g.enemyStepTimer >= g.enemyStepInterval * speedMult) {
         g.enemyStepTimer = 0;
         const minX = Math.min(...alive.map(e => e.x));
         const maxX = Math.max(...alive.map(e => e.x));
         if ((g.enemyDir > 0 && maxX + EW + 10 >= W) || (g.enemyDir < 0 && minX - 10 <= 0)) {
           g.enemyDir *= -1;
           g.enemies.forEach(e => { if (e.alive) e.y += 16; });
-           } else {
+        } else {
           g.enemies.forEach(e => { if (e.alive) e.x += 20 * g.enemyDir; });
         }
       }
-
 
       g.enemyShootTimer += dt;
       if (g.enemyShootTimer >= g.enemyShootInterval && alive.length > 0) {
@@ -593,7 +592,7 @@ export default function App() {
         const cols = [...new Set(alive.map(e => e.c))];
         const col = cols[rndInt(0, cols.length - 1)];
         const colE = alive.filter(e => e.c === col);
-         const shooter = colE.reduce((a, b) => a.y > b.y ? a : b);
+        const shooter = colE.reduce((a, b) => a.y > b.y ? a : b);
         g.enemyBullets.push({ x: shooter.x + EW / 2 - 3, y: shooter.y + EH });
         if (g.level >= 3 && rnd(0, 1) < 0.35) {
           const s2 = alive[rndInt(0, alive.length - 1)];
@@ -605,7 +604,7 @@ export default function App() {
         for (const e of g.enemies) {
           if (e.alive && rect(b.x, b.y, BW, BH, e.x, e.y, EW, EH)) {
             b.y = -9999;
-             e.hp--;
+            e.hp--;
             e.flashAge = 5;
             if (e.hp <= 0) {
               e.alive = false;
@@ -618,7 +617,7 @@ export default function App() {
               const ecol = PALETTE.enemyColors[e.r % 4];
               g.explosions.push(mkExplosion(e.x + EW / 2, e.y + EH / 2, ecol, 18));
               g.screenShake = Math.min(g.screenShake + 3, 10);
-               if (rnd(0, 1) < 0.12) g.powerups.push(mkPowerup(e.x + EW / 2 - 14, e.y));
+              if (rnd(0, 1) < 0.12) g.powerups.push(mkPowerup(e.x + EW / 2 - 14, e.y));
             }
           }
         }
@@ -628,21 +627,21 @@ export default function App() {
         if (rect(b.x, b.y, 6, 14, p.x + 8, p.y, PW - 16, PH)) {
           b.y = H + 999;
           if (g.shieldHp > 0) {
-             g.shieldHp--;
+            g.shieldHp--;
             g.screenShake = 5;
           } else {
             g.lives--;
             g.screenShake = 16;
-             g.explosions.push(mkExplosion(p.x + PW / 2, p.y + PH / 2, PALETTE.playerGlow, 22));
+            g.explosions.push(mkExplosion(p.x + PW / 2, p.y + PH / 2, PALETTE.playerGlow, 22));
             if (g.lives <= 0) { g.phase = "gameover"; setPhase("gameover"); }
           }
         }
       }
 
-        g.powerups = g.powerups.filter(pu => {
+      g.powerups = g.powerups.filter(pu => {
         pu.y += pu.vy * dt; pu.age += dt;
         if (pu.y > H + 30) return false;
-         if (rect(pu.x, pu.y, 28, 28, p.x, p.y, PW, PH)) {
+        if (rect(pu.x, pu.y, 28, 28, p.x, p.y, PW, PH)) {
           if (pu.type === "shield") g.shieldHp = 3;
           else if (pu.type === "rapid") g.rapidTimer = 300;
           else if (pu.type === "bomb") g.bombs = Math.min(g.bombs + 1, 5);
@@ -651,7 +650,7 @@ export default function App() {
         return true;
       });
 
-       alive.forEach(e => { if (e.y + EH > H - 70) { g.phase = "gameover"; setPhase("gameover"); } });
+      alive.forEach(e => { if (e.y + EH > H - 70) { g.phase = "gameover"; setPhase("gameover"); } });
       if (alive.length === 0) {
         g.level++;
         if (g.level > 8) { g.phase = "win"; setPhase("win"); return; }
@@ -662,5 +661,6 @@ export default function App() {
         g.enemyShootInterval = Math.max(24, 78 - g.level * 8);
         if (g.level % 3 === 0) g.bombs = Math.min(g.bombs + 1, 5);
       }
-        g.explosions = g.explosions.filter(ex => { ex.age += dt; return ex.age < ex.maxAge; });
+
+      g.explosions = g.explosions.filter(ex => { ex.age += dt; return ex.age < ex.maxAge; });
       if (g.screenShake > 0) g.screenShake -= 0.8;
