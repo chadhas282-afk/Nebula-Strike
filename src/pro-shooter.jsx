@@ -600,3 +600,8 @@ export default function App() {
           g.enemyBullets.push({ x: s2.x + EW / 2 - 3, y: s2.y + EH });
         }
       }
+
+      for (const b of g.bullets) {
+        for (const e of g.enemies) {
+          if (e.alive && rect(b.x, b.y, BW, BH, e.x, e.y, EW, EH)) {
+            b.y = -9999;
