@@ -605,3 +605,9 @@ export default function App() {
         for (const e of g.enemies) {
           if (e.alive && rect(b.x, b.y, BW, BH, e.x, e.y, EW, EH)) {
             b.y = -9999;
+             e.hp--;
+            e.flashAge = 5;
+            if (e.hp <= 0) {
+              e.alive = false;
+              const gap = g.frame - g.lastKillFrame;
+              g.lastKillFrame = g.frame;
