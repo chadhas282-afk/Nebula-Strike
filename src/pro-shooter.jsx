@@ -628,3 +628,8 @@ export default function App() {
         if (rect(b.x, b.y, 6, 14, p.x + 8, p.y, PW - 16, PH)) {
           b.y = H + 999;
           if (g.shieldHp > 0) {
+             g.shieldHp--;
+            g.screenShake = 5;
+          } else {
+            g.lives--;
+            g.screenShake = 16;
