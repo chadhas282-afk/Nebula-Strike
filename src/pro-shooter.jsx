@@ -596,3 +596,7 @@ export default function App() {
          const shooter = colE.reduce((a, b) => a.y > b.y ? a : b);
         g.enemyBullets.push({ x: shooter.x + EW / 2 - 3, y: shooter.y + EH });
         if (g.level >= 3 && rnd(0, 1) < 0.35) {
+          const s2 = alive[rndInt(0, alive.length - 1)];
+          g.enemyBullets.push({ x: s2.x + EW / 2 - 3, y: s2.y + EH });
+        }
+      }
