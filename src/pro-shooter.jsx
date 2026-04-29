@@ -593,3 +593,6 @@ export default function App() {
         const cols = [...new Set(alive.map(e => e.c))];
         const col = cols[rndInt(0, cols.length - 1)];
         const colE = alive.filter(e => e.c === col);
+         const shooter = colE.reduce((a, b) => a.y > b.y ? a : b);
+        g.enemyBullets.push({ x: shooter.x + EW / 2 - 3, y: shooter.y + EH });
+        if (g.level >= 3 && rnd(0, 1) < 0.35) {
