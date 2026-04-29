@@ -585,3 +585,8 @@ export default function App() {
           g.enemies.forEach(e => { if (e.alive) e.x += 20 * g.enemyDir; });
         }
       }
+
+
+      g.enemyShootTimer += dt;
+      if (g.enemyShootTimer >= g.enemyShootInterval && alive.length > 0) {
+        g.enemyShootTimer = 0;
