@@ -650,3 +650,7 @@ export default function App() {
         }
         return true;
       });
+
+       alive.forEach(e => { if (e.y + EH > H - 70) { g.phase = "gameover"; setPhase("gameover"); } });
+      if (alive.length === 0) {
+        g.level++;
