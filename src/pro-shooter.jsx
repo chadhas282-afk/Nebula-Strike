@@ -638,3 +638,7 @@ export default function App() {
           }
         }
       }
+
+        g.powerups = g.powerups.filter(pu => {
+        pu.y += pu.vy * dt; pu.age += dt;
+        if (pu.y > H + 30) return false;
