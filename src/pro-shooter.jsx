@@ -654,3 +654,7 @@ export default function App() {
        alive.forEach(e => { if (e.y + EH > H - 70) { g.phase = "gameover"; setPhase("gameover"); } });
       if (alive.length === 0) {
         g.level++;
+        if (g.level > 8) { g.phase = "win"; setPhase("win"); return; }
+        g.enemies = mkEnemies(g.level);
+        g.enemyBullets = [];
+        g.bullets = [];
