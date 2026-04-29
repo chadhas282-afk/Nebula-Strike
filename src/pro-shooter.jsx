@@ -633,3 +633,8 @@ export default function App() {
           } else {
             g.lives--;
             g.screenShake = 16;
+             g.explosions.push(mkExplosion(p.x + PW / 2, p.y + PH / 2, PALETTE.playerGlow, 22));
+            if (g.lives <= 0) { g.phase = "gameover"; setPhase("gameover"); }
+          }
+        }
+      }
