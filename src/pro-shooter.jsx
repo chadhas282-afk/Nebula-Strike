@@ -642,3 +642,6 @@ export default function App() {
         g.powerups = g.powerups.filter(pu => {
         pu.y += pu.vy * dt; pu.age += dt;
         if (pu.y > H + 30) return false;
+         if (rect(pu.x, pu.y, 28, 28, p.x, p.y, PW, PH)) {
+          if (pu.type === "shield") g.shieldHp = 3;
+          else if (pu.type === "rapid") g.rapidTimer = 300;
