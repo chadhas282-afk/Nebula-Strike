@@ -707,3 +707,9 @@ export default function App() {
     raf.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf.current);
   }, []);
+  return (
+    <div style={{
+      minHeight: "100vh",
+      background: "#010208",
+      display: "flex",
+      flexDirection: "column",
