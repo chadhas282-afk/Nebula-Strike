@@ -702,3 +702,8 @@ export default function App() {
       drawVignette(ctx);
       drawScanlines(ctx);
       ctx.restore();
+       raf.current = requestAnimationFrame(tick);
+    }
+    raf.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf.current);
+  }, []);
