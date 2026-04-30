@@ -738,3 +738,7 @@ export default function App() {
          <span>SPACE FIRE</span>
          <span>B BOMB</span>
          <span>COLLECT POWER-UPS</span>
+          </div>
+    </div>
+  );
+}
