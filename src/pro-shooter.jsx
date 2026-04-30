@@ -695,3 +695,7 @@ export default function App() {
       const shouldFlicker = g.lives === 1 && Math.floor(g.frame / 8) % 2 === 0;
       if (!shouldFlicker) drawPlayer(ctx, p.x, p.y, g.frame, g.shieldHp, g.rapidTimer, 0);
       drawHUD(ctx, {
+        score: g.score, lives: g.lives, shieldHp: g.shieldHp, rapidTimer: g.rapidTimer,
+        bombs: g.bombs, combo: g.combo, comboTimer: g.comboTimer, level: g.level,
+        bossHp: g.bossHp, bossMaxHp: g.bossMaxHp,
+      });
