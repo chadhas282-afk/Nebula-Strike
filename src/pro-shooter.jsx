@@ -723,3 +723,9 @@ export default function App() {
         overflow: "hidden",
         boxShadow: "0 0 0 1px rgba(0,180,255,0.1), 0 0 60px rgba(0,120,200,0.15), 0 0 120px rgba(0,60,120,0.1)",
       }}>
+        <canvas ref={cvs} width={W} height={H} style={{ display: "block" }} tabIndex={0} />
+      </div>
+      <div style={{
+        marginTop: 10,
+        display: "flex",
+        gap: 28,
