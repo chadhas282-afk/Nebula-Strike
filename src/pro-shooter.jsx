@@ -717,3 +717,9 @@ export default function App() {
       justifyContent: "center",
       userSelect: "none",
     }}>
+      <div style={{
+        position: "relative",
+        borderRadius: 4,
+        overflow: "hidden",
+        boxShadow: "0 0 0 1px rgba(0,180,255,0.1), 0 0 60px rgba(0,120,200,0.15), 0 0 120px rgba(0,60,120,0.1)",
+      }}>
