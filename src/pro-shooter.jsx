@@ -686,3 +686,7 @@ export default function App() {
       });
       ctx.globalAlpha = 1;
       ctx.strokeStyle = "rgba(0,180,255,0.07)"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(0, H - 68); ctx.lineTo(W, H - 68); ctx.stroke();
+      g.enemies.forEach(e => drawEnemy(ctx, e, g.frame));
+      g.bullets.forEach(b => drawBullet(ctx, b));
+      g.enemyBullets.forEach(b => drawEnemyBullet(ctx, b, g.frame));
