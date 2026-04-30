@@ -682,3 +682,7 @@ export default function App() {
       g.stars.forEach(s => {
         ctx.globalAlpha = s.bright;
         ctx.fillStyle = s.bright > 0.7 ? "#e8f0ff" : "#a0c0e0";
+         ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = "rgba(0,180,255,0.07)"; ctx.lineWidth = 1;
