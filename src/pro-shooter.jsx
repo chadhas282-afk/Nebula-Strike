@@ -735,3 +735,4 @@ export default function App() {
         fontFamily: "'Courier New', monospace",
       }}>
          <span>← → MOVE</span>
+         <span>SPACE FIRE</span>
