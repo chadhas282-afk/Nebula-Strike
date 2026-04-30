@@ -699,3 +699,6 @@ export default function App() {
         bombs: g.bombs, combo: g.combo, comboTimer: g.comboTimer, level: g.level,
         bossHp: g.bossHp, bossMaxHp: g.bossMaxHp,
       });
+      drawVignette(ctx);
+      drawScanlines(ctx);
+      ctx.restore();
