@@ -669,3 +669,8 @@ export default function App() {
       ctx.save();
       if (g.screenShake > 0) {
         const sx = (Math.random() - 0.5) * g.screenShake;
+         const sy = (Math.random() - 0.5) * g.screenShake;
+        ctx.translate(sx, sy);
+      }
+      ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
+      g.nebula.forEach(n => {
