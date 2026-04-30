@@ -690,3 +690,8 @@ export default function App() {
       g.enemies.forEach(e => drawEnemy(ctx, e, g.frame));
       g.bullets.forEach(b => drawBullet(ctx, b));
       g.enemyBullets.forEach(b => drawEnemyBullet(ctx, b, g.frame));
+       g.powerups.forEach(pu => drawPowerup(ctx, pu, g.frame));
+      g.explosions.forEach(ex => drawExplosion(ctx, ex));
+      const shouldFlicker = g.lives === 1 && Math.floor(g.frame / 8) % 2 === 0;
+      if (!shouldFlicker) drawPlayer(ctx, p.x, p.y, g.frame, g.shieldHp, g.rapidTimer, 0);
+      drawHUD(ctx, {
