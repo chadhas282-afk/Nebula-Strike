@@ -664,3 +664,8 @@ export default function App() {
 
       g.explosions = g.explosions.filter(ex => { ex.age += dt; return ex.age < ex.maxAge; });
       if (g.screenShake > 0) g.screenShake -= 0.8;
+
+       setUiScore(g.score);
+      ctx.save();
+      if (g.screenShake > 0) {
+        const sx = (Math.random() - 0.5) * g.screenShake;
