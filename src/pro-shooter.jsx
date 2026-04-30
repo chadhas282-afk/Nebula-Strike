@@ -674,3 +674,6 @@ export default function App() {
       }
       ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
       g.nebula.forEach(n => {
+        const gr = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.rx);
+        gr.addColorStop(0, `hsla(${n.hue},70%,50%,${n.alpha})`);
+        gr.addColorStop(1, "transparent");
