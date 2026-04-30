@@ -713,3 +713,7 @@ export default function App() {
       background: "#010208",
       display: "flex",
       flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      userSelect: "none",
+    }}>
