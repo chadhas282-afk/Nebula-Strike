@@ -734,3 +734,4 @@ export default function App() {
         letterSpacing: "0.14em",
         fontFamily: "'Courier New', monospace",
       }}>
+         <span>← → MOVE</span>
