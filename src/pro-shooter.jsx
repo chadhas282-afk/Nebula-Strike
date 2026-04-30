@@ -665,11 +665,11 @@ export default function App() {
       g.explosions = g.explosions.filter(ex => { ex.age += dt; return ex.age < ex.maxAge; });
       if (g.screenShake > 0) g.screenShake -= 0.8;
 
-       setUiScore(g.score);
+      setUiScore(g.score);
       ctx.save();
       if (g.screenShake > 0) {
         const sx = (Math.random() - 0.5) * g.screenShake;
-         const sy = (Math.random() - 0.5) * g.screenShake;
+        const sy = (Math.random() - 0.5) * g.screenShake;
         ctx.translate(sx, sy);
       }
       ctx.fillStyle = PALETTE.bg; ctx.fillRect(0, 0, W, H);
@@ -682,7 +682,7 @@ export default function App() {
       g.stars.forEach(s => {
         ctx.globalAlpha = s.bright;
         ctx.fillStyle = s.bright > 0.7 ? "#e8f0ff" : "#a0c0e0";
-         ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2); ctx.fill();
       });
       ctx.globalAlpha = 1;
       ctx.strokeStyle = "rgba(0,180,255,0.07)"; ctx.lineWidth = 1;
@@ -690,7 +690,7 @@ export default function App() {
       g.enemies.forEach(e => drawEnemy(ctx, e, g.frame));
       g.bullets.forEach(b => drawBullet(ctx, b));
       g.enemyBullets.forEach(b => drawEnemyBullet(ctx, b, g.frame));
-       g.powerups.forEach(pu => drawPowerup(ctx, pu, g.frame));
+      g.powerups.forEach(pu => drawPowerup(ctx, pu, g.frame));
       g.explosions.forEach(ex => drawExplosion(ctx, ex));
       const shouldFlicker = g.lives === 1 && Math.floor(g.frame / 8) % 2 === 0;
       if (!shouldFlicker) drawPlayer(ctx, p.x, p.y, g.frame, g.shieldHp, g.rapidTimer, 0);
@@ -702,7 +702,7 @@ export default function App() {
       drawVignette(ctx);
       drawScanlines(ctx);
       ctx.restore();
-       raf.current = requestAnimationFrame(tick);
+      raf.current = requestAnimationFrame(tick);
     }
     raf.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf.current);
@@ -729,16 +729,16 @@ export default function App() {
         marginTop: 10,
         display: "flex",
         gap: 28,
-         color: "rgba(0,160,200,0.45)",
+        color: "rgba(0,160,200,0.45)",
         fontSize: 11,
         letterSpacing: "0.14em",
         fontFamily: "'Courier New', monospace",
       }}>
-         <span>← → MOVE</span>
-         <span>SPACE FIRE</span>
-         <span>B BOMB</span>
-         <span>COLLECT POWER-UPS</span>
-          </div>
+        <span>← → MOVE</span>
+        <span>SPACE FIRE</span>
+        <span>B BOMB</span>
+        <span>COLLECT POWER-UPS</span>
+      </div>
     </div>
   );
 }
