@@ -729,3 +729,8 @@ export default function App() {
         marginTop: 10,
         display: "flex",
         gap: 28,
+         color: "rgba(0,160,200,0.45)",
+        fontSize: 11,
+        letterSpacing: "0.14em",
+        fontFamily: "'Courier New', monospace",
+      }}>
