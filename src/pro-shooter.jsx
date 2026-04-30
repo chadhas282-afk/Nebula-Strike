@@ -736,3 +736,4 @@ export default function App() {
       }}>
          <span>← → MOVE</span>
          <span>SPACE FIRE</span>
+         <span>B BOMB</span>
