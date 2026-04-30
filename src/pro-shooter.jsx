@@ -677,3 +677,8 @@ export default function App() {
         const gr = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.rx);
         gr.addColorStop(0, `hsla(${n.hue},70%,50%,${n.alpha})`);
         gr.addColorStop(1, "transparent");
+        ctx.fillStyle = gr; ctx.fillRect(0, 0, W, H);
+      });
+      g.stars.forEach(s => {
+        ctx.globalAlpha = s.bright;
+        ctx.fillStyle = s.bright > 0.7 ? "#e8f0ff" : "#a0c0e0";
